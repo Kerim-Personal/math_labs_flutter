@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pdf/providers/theme_provider.dart';
+import 'package:math_labs_flutter/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class SettingsScreen extends StatelessWidget {

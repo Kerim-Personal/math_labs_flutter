@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:pdf/screens/main_screen.dart';
-import 'package:pdf/screens/name_entry_screen.dart';
-import 'package:pdf/services/settings_service.dart';
+import 'package:math_labs_flutter/screens/main_screen.dart';
+import 'package:math_labs_flutter/screens/name_entry_screen.dart';
+import 'package:math_labs_flutter/services/settings_service.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

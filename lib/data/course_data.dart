@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pdf/models/course.dart';
+import 'package:math_labs_flutter/models/course.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 // Konu başlığını "kalkulus_limit_ve_sureklilik" gibi bir formata çevirir.

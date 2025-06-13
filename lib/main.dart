@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:pdf/providers/locale_provider.dart';
-import 'package:pdf/providers/theme_provider.dart';
-import 'package:pdf/screens/splash_screen.dart';
+import 'package:math_labs_flutter/providers/locale_provider.dart';
+import 'package:math_labs_flutter/providers/theme_provider.dart';
+import 'package:math_labs_flutter/screens/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 

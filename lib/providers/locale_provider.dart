@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pdf/services/settings_service.dart';
+import 'package:math_labs_flutter/services/settings_service.dart';
 
 class LocaleProvider with ChangeNotifier {
   final SettingsService _settingsService = SettingsService();

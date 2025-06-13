@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pdf/screens/main_screen.dart';
-import 'package:pdf/services/settings_service.dart';
+import 'package:math_labs_flutter/screens/main_screen.dart';
+import 'package:math_labs_flutter/services/settings_service.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class NameEntryScreen extends StatefulWidget {
@@ -57,7 +57,7 @@ class _NameEntryScreenState extends State<NameEntryScreen> {
         child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(
-            mainAxisAlignmente: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 localizations.name_prompt,
