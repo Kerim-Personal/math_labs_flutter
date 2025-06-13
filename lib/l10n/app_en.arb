@@ -1,0 +1,4 @@
+"name_prompt": "Awesome! What is your name?",
+  "name_hint": "Your Name",
+  "continue_button": "Continue",
+  "enter_valid_name_toast": "Please enter a valid name."
