@@ -1,10 +1,12 @@
-name: pdf
-description: "A Flutter app for studying math with PDFs."
+# Projenin adını 'pdf' yerine 'math_labs_flutter' olarak düzeltiyoruz.
+name: math_labs_flutter
+description: "A Flutter app for studying math with PDFs and an AI assistant."
 publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
+  # Flutter/Dart sürümünüzle uyumlu
   sdk: '>=3.4.3 <4.0.0'
 
 dependencies:
@@ -12,6 +14,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+
   flutter_dotenv: ^5.1.0
   cupertino_icons: ^1.0.8
   syncfusion_flutter_pdfviewer: ^26.1.39
@@ -27,15 +30,19 @@ dev_dependencies:
 
   flutter_lints: ^4.0.0
 
+# --- ÇÖZÜM BURADA ---
+# Bu bölüm, projedeki tüm paketleri 'intl' paketinin 0.20.2 sürümünü
+# kullanmaya zorlar. Bu, flutter_localizations'ın gereksinimini karşılar
+# ve syncfusion_flutter_pdfviewer'ın eski sürüm isteğini geçersiz kılar.
 dependency_overrides:
   intl: 0.20.2
 
 flutter:
-  # Bu satırı ekleyin
   generate: true
 
   uses-material-design: true
 
   assets:
+    - .env
     - assets/images/
     - assets/pdfs/
