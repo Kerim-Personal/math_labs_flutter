@@ -1,4 +1,23 @@
-"name_prompt": "Harika! Şimdi adın ne?",
-  "name_hint": "Adınız",
+{
+  "@@locale": "tr",
+  "main_title": "Matematik Laboratuvarları",
+  "course_calculus": "Kalkülüs",
+  "topic_calculus_limit": "Limit ve Süreklilik",
+  "settings": "Ayarlar",
+  "name_prompt": "İsminiz nedir?",
+  "name_hint": "İsminiz",
   "continue_button": "Devam Et",
-  "enter_valid_name_toast": "Lütfen geçerli bir ad girin."
+  "enter_valid_name_toast": "Lütfen geçerli bir isim giriniz.",
+  "view_settings": "Görünüm",
+  "theme_mode": "Tema Modu",
+  "system_default": "Sistem Varsayılanı",
+  "light_theme": "Açık Tema",
+  "dark_theme": "Karanlık Tema",
+  "app_color": "Uygulama Rengi",
+  "serene_blue": "Sakin Mavi",
+  "red": "Kırmızı",
+  "ask_ai": "Yapay Zeka Asistanına Sor",
+  "ask_question": "Bir soru sorun...",
+  "close": "Kapat",
+  "send": "Gönder"
+}

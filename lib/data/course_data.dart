@@ -18,28 +18,24 @@ String _normalize(String input) {
 List<Course> getCourseList(BuildContext context) {
   final localizations = AppLocalizations.of(context)!;
 
-  // Orijinal projedeki tüm dersler ve konular
+  // Ders ve konu başlıklarını yerelleştirme dosyalarından alıyoruz.
+  final String calculusCourse = localizations.course_calculus;
+  final String limitTopic = localizations.topic_calculus_limit;
+
   final courses = [
     Course(
-      title: localizations.course_calculus,
+      title: calculusCourse,
       topics: [
-        localizations.topic_calculus_limit,
-        // Diğer konular...
+        limitTopic,
       ],
-      // PDF yollarını otomatik olarak oluşturuyoruz
+      // PDF yollarını otomatik olarak oluşturuyoruz.
       topicPdfPaths: {
-        localizations.topic_calculus_limit: 'assets/pdfs/${_normalize(localizations.course_calculus)}_${_normalize(localizations.topic_calculus_limit)}.pdf',
+        limitTopic: 'assets/pdfs/${_normalize(calculusCourse)}_${_normalize(limitTopic)}.pdf',
         // Örnek: 'assets/pdfs/kalkulus_limit_ve_sureklilik.pdf'
       },
     ),
-    // Diğer tüm dersler buraya aynı formatta eklenecek.
-    // Şimdilik sadece bir örnekle ilerliyoruz. Tamamını eklemek
-    // tüm stringlerin l10n dosyalarına eklenmesini gerektirir ve bu çok uzun sürer.
-    // Mantık bu şekildedir.
+    // Diğer dersler ve konular buraya eklenebilir.
   ];
 
-  // PDF'i olmayan konular için uyarı göstermek yerine listeyi dinamik tutabiliriz.
-  // Bu örnekte, sadece PDF'i olan tek konuyu gösteriyoruz.
-  // Gerçek bir uygulamada, var olan tüm PDF'ler için bu liste doldurulmalıdır.
   return courses;
 }

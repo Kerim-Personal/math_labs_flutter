@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:math_labs_flutter/services/ai_service.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AiChatDialog extends StatefulWidget {
   final AiService aiService;
@@ -35,15 +36,17 @@ class _AiChatDialogState extends State<AiChatDialog> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     return AlertDialog(
-      title: const Text('Ask AI Assistant'),
+      title: Text(localizations.ask_ai),
       content: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             TextField(
               controller: _textController,
-              decoration: const InputDecoration(hintText: 'Ask a question...'),
+              decoration: InputDecoration(hintText: localizations.ask_question),
               onSubmitted: (_) => _sendMessage(),
             ),
             const SizedBox(height: 20),
@@ -57,11 +60,11 @@ class _AiChatDialogState extends State<AiChatDialog> {
       actions: [
         TextButton(
           onPressed: () => Navigator.of(context).pop(),
-          child: const Text('Close'),
+          child: Text(localizations.close),
         ),
         ElevatedButton(
           onPressed: _isLoading ? null : _sendMessage,
-          child: const Text('Send'),
+          child: Text(localizations.send),
         )
       ],
     );

@@ -1,4 +1,23 @@
-"name_prompt": "Awesome! What is your name?",
+{
+  "@@locale": "en",
+  "main_title": "Math Labs",
+  "course_calculus": "Calculus",
+  "topic_calculus_limit": "Limit and Continuity",
+  "settings": "Settings",
+  "name_prompt": "What is your name?",
   "name_hint": "Your Name",
   "continue_button": "Continue",
-  "enter_valid_name_toast": "Please enter a valid name."
+  "enter_valid_name_toast": "Please enter a valid name.",
+  "view_settings": "Appearance",
+  "theme_mode": "Theme Mode",
+  "system_default": "System Default",
+  "light_theme": "Light Theme",
+  "dark_theme": "Dark Theme",
+  "app_color": "Application Color",
+  "serene_blue": "Serene Blue",
+  "red": "Red",
+  "ask_ai": "Ask AI Assistant",
+  "ask_question": "Ask a question...",
+  "close": "Close",
+  "send": "Send"
+}

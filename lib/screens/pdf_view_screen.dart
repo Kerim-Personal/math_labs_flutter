@@ -20,12 +20,15 @@ class PdfViewScreen extends StatefulWidget {
 class _PdfViewScreenState extends State<PdfViewScreen> {
   late final PdfViewerController _pdfViewerController;
   late final AiService _aiService;
+  late final PdfAnnotationManager _annotationManager;
+
 
   @override
   void initState() {
     super.initState();
     _pdfViewerController = PdfViewerController();
     _aiService = AiService();
+    _annotationManager = PdfAnnotationManager();
   }
 
   void _showAiChatDialog() {
@@ -47,25 +50,30 @@ class _PdfViewScreenState extends State<PdfViewScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.edit),
-            onPressed: () => _pdfViewerController.annotationManager.setAnnotationMode(AnnotationMode.freeHand),
+            onPressed: () => setState(() {
+              _annotationManager.mode = AnnotationMode.freeHand;
+            }),
           ),
           IconButton(
             icon: const Icon(Icons.square_outlined),
-            onPressed: () => _pdfViewerController.annotationManager.setAnnotationMode(AnnotationMode.eraser),
+            onPressed: () => setState(() {
+              _annotationManager.mode = AnnotationMode.rectangle;
+            }),
           ),
           IconButton(
             icon: const Icon(Icons.undo),
-            onPressed: () => _pdfViewerController.annotationManager.undo(),
+            onPressed: () => _annotationManager.undo(),
           ),
           IconButton(
             icon: const Icon(Icons.delete_forever),
-            onPressed: () => _pdfViewerController.annotationManager.clearAnnotations(),
+            onPressed: () => _annotationManager.clear(),
           ),
         ],
       ),
       body: SfPdfViewer.asset(
         widget.pdfPath,
         controller: _pdfViewerController,
+        annotationManager: _annotationManager,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _showAiChatDialog,
