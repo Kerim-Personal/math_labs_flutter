@@ -5,6 +5,8 @@ import 'package:math_labs_flutter/screens/pdf_view_screen.dart';
 import 'package:math_labs_flutter/screens/settings_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../l10n/app_localizations.dart';
+
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 

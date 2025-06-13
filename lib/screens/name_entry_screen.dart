@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:math_labs_flutter/screens/main_screen.dart';
 import 'package:math_labs_flutter/services/settings_service.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart'; // Use only the generated file
 
 class NameEntryScreen extends StatefulWidget {
   const NameEntryScreen({super.key});
@@ -16,7 +16,7 @@ class _NameEntryScreenState extends State<NameEntryScreen> {
 
   @override
   void dispose() {
-    // Controller'ı temizleyerek memory leak (hafıza sızıntısı) önlüyoruz.
+    // Clean up the controller to prevent memory leaks
     _nameController.dispose();
     super.dispose();
   }
@@ -24,17 +24,17 @@ class _NameEntryScreenState extends State<NameEntryScreen> {
   void _continue() async {
     final name = _nameController.text.trim();
     if (name.isNotEmpty) {
-      // İsmi kaydet
+      // Save the username
       await _settingsService.saveUsername(name);
 
-      // Ana Ekrana yönlendir ve bu ekranı yığından (stack) kaldır
+      // Navigate to MainScreen and remove this screen from the stack
       if (mounted) {
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => const MainScreen()),
         );
       }
     } else {
-      // İsim boşsa kullanıcıyı uyar
+      // Show snackbar if name is empty
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -47,7 +47,7 @@ class _NameEntryScreenState extends State<NameEntryScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Temadan renkleri alarak dinamik bir UI oluşturuyoruz.
+    // Get theme and localization for dynamic UI
     final theme = Theme.of(context);
     final localizations = AppLocalizations.of(context)!;
 

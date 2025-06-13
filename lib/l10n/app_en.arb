@@ -1,23 +1,84 @@
 {
   "@@locale": "en",
+  "@@last_modified": "2025-06-13T15:26:00",
   "main_title": "Math Labs",
+  "@main_title": {
+    "description": "The main title of the application"
+  },
   "course_calculus": "Calculus",
+  "@course_calculus": {
+    "description": "The name of the Calculus course"
+  },
   "topic_calculus_limit": "Limit and Continuity",
+  "@topic_calculus_limit": {
+    "description": "The topic title for Limit and Continuity in Calculus"
+  },
   "settings": "Settings",
+  "@settings": {
+    "description": "The settings menu title"
+  },
   "name_prompt": "What is your name?",
+  "@name_prompt": {
+    "description": "Prompt asking for the user's name"
+  },
   "name_hint": "Your Name",
+  "@name_hint": {
+    "description": "Hint text for the name input field"
+  },
   "continue_button": "Continue",
+  "@continue_button": {
+    "description": "Label for the continue button"
+  },
   "enter_valid_name_toast": "Please enter a valid name.",
+  "@enter_valid_name_toast": {
+    "description": "Toast message for invalid name input"
+  },
   "view_settings": "Appearance",
+  "@view_settings": {
+    "description": "Section title for appearance settings"
+  },
   "theme_mode": "Theme Mode",
+  "@theme_mode": {
+    "description": "Label for theme mode selection"
+  },
   "system_default": "System Default",
+  "@system_default": {
+    "description": "Option for system default theme"
+  },
   "light_theme": "Light Theme",
+  "@light_theme": {
+    "description": "Option for light theme"
+  },
   "dark_theme": "Dark Theme",
+  "@dark_theme": {
+    "description": "Option for dark theme"
+  },
   "app_color": "Application Color",
+  "@app_color": {
+    "description": "Label for application color selection"
+  },
   "serene_blue": "Serene Blue",
+  "@serene_blue": {
+    "description": "Option for serene blue color theme"
+  },
   "red": "Red",
+  "@red": {
+    "description": "Option for red color theme"
+  },
   "ask_ai": "Ask AI Assistant",
+  "@ask_ai": {
+    "description": "Label for asking the AI assistant"
+  },
   "ask_question": "Ask a question...",
+  "@ask_question": {
+    "description": "Placeholder text for question input"
+  },
   "close": "Close",
-  "send": "Send"
+  "@close": {
+    "description": "Label for closing a dialog or window"
+  },
+  "send": "Send",
+  "@send": {
+    "description": "Label for sending a message or request"
+  }
 }

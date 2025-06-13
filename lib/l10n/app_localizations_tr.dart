@@ -9,28 +9,28 @@ class AppLocalizationsTr extends AppLocalizations {
   AppLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get main_title => 'Matematik Laboratuvarları';
+  String get main_title => 'Matematik Laboratuvarı';
 
   @override
   String get course_calculus => 'Kalkülüs';
 
   @override
-  String get topic_calculus_limit => 'Limit ve Süreklilik';
+  String get topic_calculus_limit => 'Sınır ve Süreklilik';
 
   @override
   String get settings => 'Ayarlar';
 
   @override
-  String get name_prompt => 'İsminiz nedir?';
+  String get name_prompt => 'Adın nedir?';
 
   @override
-  String get name_hint => 'İsminiz';
+  String get name_hint => 'Adın';
 
   @override
   String get continue_button => 'Devam Et';
 
   @override
-  String get enter_valid_name_toast => 'Lütfen geçerli bir isim giriniz.';
+  String get enter_valid_name_toast => 'Lütfen geçerli bir ad girin.';
 
   @override
   String get view_settings => 'Görünüm';
@@ -57,10 +57,10 @@ class AppLocalizationsTr extends AppLocalizations {
   String get red => 'Kırmızı';
 
   @override
-  String get ask_ai => 'Yapay Zeka Asistanına Sor';
+  String get ask_ai => 'AI Asistanına Sor';
 
   @override
-  String get ask_question => 'Bir soru sorun...';
+  String get ask_question => 'Bir soru sor...';
 
   @override
   String get close => 'Kapat';

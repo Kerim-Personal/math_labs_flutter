@@ -7,13 +7,13 @@ import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() async {
-  // Uygulama başlamadan önce yapılacak asenkron işlemleri etkinleştir
+  // Enable asynchronous operations before app initialization
   WidgetsFlutterBinding.ensureInitialized();
 
-  // .env dosyasındaki API anahtarını yükle
+  // Load API key from .env file
   await dotenv.load(fileName: ".env");
 
-  // Uygulamayı birden fazla provider ile başlat
+  // Initialize the app with multiple providers
   runApp(
     MultiProvider(
       providers: [
@@ -30,25 +30,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Tema ve dil sağlayıcılarındaki değişiklikleri dinle
+    // Listen to changes in theme and locale providers
     final themeProvider = context.watch<ThemeProvider>();
     final localeProvider = context.watch<LocaleProvider>();
 
     return MaterialApp(
       title: 'Math Labs',
       debugShowCheckedModeBanner: false,
-
-      // --- Dil Desteği (l10n) ---
+      // Localization support
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: localeProvider.locale, // Dili provider'dan dinamik olarak al
-
-      // --- Tema Yönetimi ---
-      theme: themeProvider.getThemeData(),      // Aydınlık tema
-      darkTheme: themeProvider.getDarkThemeData(), // Karanlık tema
-      themeMode: themeProvider.themeMode,      // Hangi modun kullanılacağı
-
-      // --- Başlangıç Ekranı ---
+      locale: localeProvider.locale, // Dynamically set locale from provider
+      // Theme management
+      theme: themeProvider.getThemeData(),      // Light theme
+      darkTheme: themeProvider.getDarkThemeData(), // Dark theme
+      themeMode: themeProvider.themeMode,      // Theme mode selection
+      // Initial screen
       home: const SplashScreen(),
     );
   }

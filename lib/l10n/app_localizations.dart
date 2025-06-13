@@ -98,121 +98,121 @@ abstract class AppLocalizations {
     Locale('tr')
   ];
 
-  /// No description provided for @main_title.
+  /// The main title of the application
   ///
   /// In en, this message translates to:
   /// **'Math Labs'**
   String get main_title;
 
-  /// No description provided for @course_calculus.
+  /// The name of the Calculus course
   ///
   /// In en, this message translates to:
   /// **'Calculus'**
   String get course_calculus;
 
-  /// No description provided for @topic_calculus_limit.
+  /// The topic title for Limit and Continuity in Calculus
   ///
   /// In en, this message translates to:
   /// **'Limit and Continuity'**
   String get topic_calculus_limit;
 
-  /// No description provided for @settings.
+  /// The settings menu title
   ///
   /// In en, this message translates to:
   /// **'Settings'**
   String get settings;
 
-  /// No description provided for @name_prompt.
+  /// Prompt asking for the user's name
   ///
   /// In en, this message translates to:
   /// **'What is your name?'**
   String get name_prompt;
 
-  /// No description provided for @name_hint.
+  /// Hint text for the name input field
   ///
   /// In en, this message translates to:
   /// **'Your Name'**
   String get name_hint;
 
-  /// No description provided for @continue_button.
+  /// Label for the continue button
   ///
   /// In en, this message translates to:
   /// **'Continue'**
   String get continue_button;
 
-  /// No description provided for @enter_valid_name_toast.
+  /// Toast message for invalid name input
   ///
   /// In en, this message translates to:
   /// **'Please enter a valid name.'**
   String get enter_valid_name_toast;
 
-  /// No description provided for @view_settings.
+  /// Section title for appearance settings
   ///
   /// In en, this message translates to:
   /// **'Appearance'**
   String get view_settings;
 
-  /// No description provided for @theme_mode.
+  /// Label for theme mode selection
   ///
   /// In en, this message translates to:
   /// **'Theme Mode'**
   String get theme_mode;
 
-  /// No description provided for @system_default.
+  /// Option for system default theme
   ///
   /// In en, this message translates to:
   /// **'System Default'**
   String get system_default;
 
-  /// No description provided for @light_theme.
+  /// Option for light theme
   ///
   /// In en, this message translates to:
   /// **'Light Theme'**
   String get light_theme;
 
-  /// No description provided for @dark_theme.
+  /// Option for dark theme
   ///
   /// In en, this message translates to:
   /// **'Dark Theme'**
   String get dark_theme;
 
-  /// No description provided for @app_color.
+  /// Label for application color selection
   ///
   /// In en, this message translates to:
   /// **'Application Color'**
   String get app_color;
 
-  /// No description provided for @serene_blue.
+  /// Option for serene blue color theme
   ///
   /// In en, this message translates to:
   /// **'Serene Blue'**
   String get serene_blue;
 
-  /// No description provided for @red.
+  /// Option for red color theme
   ///
   /// In en, this message translates to:
   /// **'Red'**
   String get red;
 
-  /// No description provided for @ask_ai.
+  /// Label for asking the AI assistant
   ///
   /// In en, this message translates to:
   /// **'Ask AI Assistant'**
   String get ask_ai;
 
-  /// No description provided for @ask_question.
+  /// Placeholder text for question input
   ///
   /// In en, this message translates to:
   /// **'Ask a question...'**
   String get ask_question;
 
-  /// No description provided for @close.
+  /// Label for closing a dialog or window
   ///
   /// In en, this message translates to:
   /// **'Close'**
   String get close;
 
-  /// No description provided for @send.
+  /// Label for sending a message or request
   ///
   /// In en, this message translates to:
   /// **'Send'**

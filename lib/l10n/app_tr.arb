@@ -1,23 +1,84 @@
 {
   "@@locale": "tr",
-  "main_title": "Matematik Laboratuvarları",
+  "@@last_modified": "2025-06-13T15:26:00",
+  "main_title": "Matematik Laboratuvarı",
+  "@main_title": {
+    "description": "The main title of the application"
+  },
   "course_calculus": "Kalkülüs",
-  "topic_calculus_limit": "Limit ve Süreklilik",
+  "@course_calculus": {
+    "description": "The name of the Calculus course"
+  },
+  "topic_calculus_limit": "Sınır ve Süreklilik",
+  "@topic_calculus_limit": {
+    "description": "The topic title for Limit and Continuity in Calculus"
+  },
   "settings": "Ayarlar",
-  "name_prompt": "İsminiz nedir?",
-  "name_hint": "İsminiz",
+  "@settings": {
+    "description": "The settings menu title"
+  },
+  "name_prompt": "Adın nedir?",
+  "@name_prompt": {
+    "description": "Prompt asking for the user's name"
+  },
+  "name_hint": "Adın",
+  "@name_hint": {
+    "description": "Hint text for the name input field"
+  },
   "continue_button": "Devam Et",
-  "enter_valid_name_toast": "Lütfen geçerli bir isim giriniz.",
+  "@continue_button": {
+    "description": "Label for the continue button"
+  },
+  "enter_valid_name_toast": "Lütfen geçerli bir ad girin.",
+  "@enter_valid_name_toast": {
+    "description": "Toast message for invalid name input"
+  },
   "view_settings": "Görünüm",
+  "@view_settings": {
+    "description": "Section title for appearance settings"
+  },
   "theme_mode": "Tema Modu",
+  "@theme_mode": {
+    "description": "Label for theme mode selection"
+  },
   "system_default": "Sistem Varsayılanı",
+  "@system_default": {
+    "description": "Option for system default theme"
+  },
   "light_theme": "Açık Tema",
+  "@light_theme": {
+    "description": "Option for light theme"
+  },
   "dark_theme": "Karanlık Tema",
+  "@dark_theme": {
+    "description": "Option for dark theme"
+  },
   "app_color": "Uygulama Rengi",
+  "@app_color": {
+    "description": "Label for application color selection"
+  },
   "serene_blue": "Sakin Mavi",
+  "@serene_blue": {
+    "description": "Option for serene blue color theme"
+  },
   "red": "Kırmızı",
-  "ask_ai": "Yapay Zeka Asistanına Sor",
-  "ask_question": "Bir soru sorun...",
+  "@red": {
+    "description": "Option for red color theme"
+  },
+  "ask_ai": "AI Asistanına Sor",
+  "@ask_ai": {
+    "description": "Label for asking the AI assistant"
+  },
+  "ask_question": "Bir soru sor...",
+  "@ask_question": {
+    "description": "Placeholder text for question input"
+  },
   "close": "Kapat",
-  "send": "Gönder"
+  "@close": {
+    "description": "Label for closing a dialog or window"
+  },
+  "send": "Gönder",
+  "@send": {
+    "description": "Label for sending a message or request"
+  }
 }

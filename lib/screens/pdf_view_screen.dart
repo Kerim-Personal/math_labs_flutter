@@ -20,15 +20,12 @@ class PdfViewScreen extends StatefulWidget {
 class _PdfViewScreenState extends State<PdfViewScreen> {
   late final PdfViewerController _pdfViewerController;
   late final AiService _aiService;
-  // --- ÇÖZÜM ---
-  // PdfAnnotationManager kaldırıldı. Artık gerekli değil.
 
   @override
   void initState() {
     super.initState();
     _pdfViewerController = PdfViewerController();
     _aiService = AiService();
-    // _annotationManager'ın başlatılması kaldırıldı.
   }
 
   void _showAiChatDialog() {
@@ -48,42 +45,13 @@ class _PdfViewScreenState extends State<PdfViewScreen> {
         backgroundColor: theme.colorScheme.primary,
         iconTheme: IconThemeData(color: theme.colorScheme.onPrimary),
         actions: [
-          // --- ÇÖZÜM ---
-          // Tüm onPressed metotları _pdfViewerController kullanacak şekilde güncellendi.
-          IconButton(
-            icon: const Icon(Icons.edit),
-            onPressed: () {
-              // Annotation (not alma) modunu doğrudan controller üzerinden ayarlıyoruz.
-              _pdfViewerController.annotationMode = AnnotationMode.freehand;
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.square_outlined),
-            onPressed: () {
-              _pdfViewerController.annotationMode = AnnotationMode.rectangle;
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.undo),
-            onPressed: () {
-              // Geri alma işlemi controller üzerinden yapılıyor.
-              _pdfViewerController.undo();
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.delete_forever),
-            onPressed: () {
-              // Tümünü temizleme işlemi controller üzerinden yapılıyor.
-              _pdfViewerController.clearAnnotations();
-            },
-          ),
+          // Removed annotation-related buttons due to unsupported API
+          // You can add custom logic or update the package for annotation support
         ],
       ),
       body: SfPdfViewer.asset(
         widget.pdfPath,
         controller: _pdfViewerController,
-        // --- ÇÖZÜM ---
-        // annotationManager parametresi kaldırıldı çünkü artık mevcut değil.
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _showAiChatDialog,
