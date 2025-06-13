@@ -20,15 +20,15 @@ class PdfViewScreen extends StatefulWidget {
 class _PdfViewScreenState extends State<PdfViewScreen> {
   late final PdfViewerController _pdfViewerController;
   late final AiService _aiService;
-  late final PdfAnnotationManager _annotationManager;
-
+  // --- ÇÖZÜM ---
+  // PdfAnnotationManager kaldırıldı. Artık gerekli değil.
 
   @override
   void initState() {
     super.initState();
     _pdfViewerController = PdfViewerController();
     _aiService = AiService();
-    _annotationManager = PdfAnnotationManager();
+    // _annotationManager'ın başlatılması kaldırıldı.
   }
 
   void _showAiChatDialog() {
@@ -48,32 +48,42 @@ class _PdfViewScreenState extends State<PdfViewScreen> {
         backgroundColor: theme.colorScheme.primary,
         iconTheme: IconThemeData(color: theme.colorScheme.onPrimary),
         actions: [
+          // --- ÇÖZÜM ---
+          // Tüm onPressed metotları _pdfViewerController kullanacak şekilde güncellendi.
           IconButton(
             icon: const Icon(Icons.edit),
-            onPressed: () => setState(() {
-              _annotationManager.mode = AnnotationMode.freeHand;
-            }),
+            onPressed: () {
+              // Annotation (not alma) modunu doğrudan controller üzerinden ayarlıyoruz.
+              _pdfViewerController.annotationMode = AnnotationMode.freehand;
+            },
           ),
           IconButton(
             icon: const Icon(Icons.square_outlined),
-            onPressed: () => setState(() {
-              _annotationManager.mode = AnnotationMode.rectangle;
-            }),
+            onPressed: () {
+              _pdfViewerController.annotationMode = AnnotationMode.rectangle;
+            },
           ),
           IconButton(
             icon: const Icon(Icons.undo),
-            onPressed: () => _annotationManager.undo(),
+            onPressed: () {
+              // Geri alma işlemi controller üzerinden yapılıyor.
+              _pdfViewerController.undo();
+            },
           ),
           IconButton(
             icon: const Icon(Icons.delete_forever),
-            onPressed: () => _annotationManager.clear(),
+            onPressed: () {
+              // Tümünü temizleme işlemi controller üzerinden yapılıyor.
+              _pdfViewerController.clearAnnotations();
+            },
           ),
         ],
       ),
       body: SfPdfViewer.asset(
         widget.pdfPath,
         controller: _pdfViewerController,
-        annotationManager: _annotationManager,
+        // --- ÇÖZÜM ---
+        // annotationManager parametresi kaldırıldı çünkü artık mevcut değil.
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _showAiChatDialog,
